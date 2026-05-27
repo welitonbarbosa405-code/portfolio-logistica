@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Weliton Barbosa — Analista de Dados, Consultor SAP PP e Green Belt Six Sigma especializado em automação e logística.">
+  <meta property="og:title" content="Weliton Barbosa | Portfólio">
+  <meta property="og:description" content="Analista de Dados · Consultor SAP PP · Green Belt Six Sigma — Automação, Python, SQL e Power BI aplicados à logística.">
+  <meta property="og:type" content="website">
+  <title>Weliton Barbosa | Portfólio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loadingScreen">
+    <div class="loader-inner">
+      <div class="loader-logo">WB</div>
+      <p class="loader-text">Carregando portfólio...</p>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Nav -->
+  <nav id="navbar">
+    <div class="nav-logo">WB</div>
+    <div class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#mapa">Operações</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificacoes">Certificações</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content" id="heroContent">
+      <div class="hero-badge"><span class="badge-dot"></span> Disponível para oportunidades</div>
+      <h1>Weliton Barbosa</h1>
+      <p class="hero-subtitle">
+        <span id="typewriter"></span><span class="type-cursor">|</span>
+      </p>
+      <p class="hero-desc">Automação, SQL, Python e Power BI aplicados à logística e PCP para transformar dados em decisões e operações em resultados.</p>
+      <div class="hero-buttons">
+        <a href="#projetos" class="btn-primary mag-btn">Ver Projetos</a>
+        <a href="curriculo.pdf" download class="btn-secondary mag-btn"><i class="fas fa-download"></i> Baixar CV</a>
+      </div>
+    </div>
+    <div class="hero-metrics" id="heroMetrics">
+      <div class="metric">
+        <div class="metric-value"><span class="metric-number" data-target="4">0</span></div>
+        <span class="metric-label">Projetos</span>
+      </div>
+      <div class="metric">
+        <div class="metric-value"><span class="metric-number" data-target="30">0</span><span class="metric-suffix">%</span></div>
+        <span class="metric-label">Redução de Custo</span>
+      </div>
+      <div class="metric">
+        <div class="metric-value"><span class="metric-number" data-target="5000">0</span><span class="metric-suffix">+</span></div>
+        <span class="metric-label">Entregas Otimizadas</span>
+      </div>
+      <div class="metric">
+        <div class="metric-value"><span class="metric-number" data-target="3">0</span></div>
+        <span class="metric-label">Anos de Experiência</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <h2 class="section-title">Sobre Mim</h2>
+
+      <div class="atualmente-card" data-reveal>
+        <div class="atualmente-left">
+          <span class="atualmente-status"><span class="status-dot"></span> Trabalhando atualmente</span>
+          <h3>Kuhn Group</h3>
+          <p>Analista de Dados · Analista de PCP</p>
+          <span class="atualmente-local"><i class="fas fa-map-marker-alt"></i> Curitiba, Paraná, Brasil</span>
+        </div>
+        <div class="atualmente-right">
+          <div class="atualmente-tags">
+            <span>SAP PP</span><span>Power BI</span><span>Python</span><span>SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-content">
+        <div class="sobre-text">
+          <p>Profissional de logística e dados especializado em <strong>automação</strong>, <strong>análise de dados</strong> e <strong>desenvolvimento de sistemas</strong> para otimização de operações industriais e logísticas.</p>
+          <p>Combino conhecimento operacional com habilidades técnicas para criar soluções que reduzem custos, aumentam eficiência e geram insights acionáveis para tomada de decisão estratégica.</p>
+          <p>Minha abordagem une a visão de quem vive a operação com a mentalidade de quem constrói tecnologia para resolvê-la.</p>
+        </div>
+        <div class="timeline">
+          <h3><i class="fas fa-route"></i> Trajetória</h3>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 — Atual</span>
+              <h4>Analista de Dados · PCP — Kuhn Group</h4>
+              <p>Automação de processos, SAP PP e integração de sistemas via API</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022 — 2024</span>
+              <h4>Analista de Logística</h4>
+              <p>Desenvolvimento de dashboards e relatórios gerenciais com Power BI</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2021 — 2022</span>
+              <h4>Assistente de Logística</h4>
+              <p>Controle de estoque e roteirização de entregas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="resultados" id="resultados">
+    <div class="container">
+      <h2 class="section-title">Resultados Reais</h2>
+      <p class="section-subtitle">Números que falam por si mesmos</p>
+      <div class="resultados-grid">
+        <div class="resultado-card tilt-card" data-reveal>
+          <div class="resultado-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="resultado-valor">
+            <span class="resultado-number counter" data-target="30">0</span><span class="resultado-suffix">%</span>
+          </div>
+          <p>Redução de custos operacionais com automação de roteirização</p>
+        </div>
+        <div class="resultado-card tilt-card" data-reveal>
+          <div class="resultado-icon"><i class="fas fa-clock"></i></div>
+          <div class="resultado-valor">
+            <span class="resultado-number counter" data-target="8">0</span><span class="resultado-suffix">h</span>
+          </div>
+          <p>Horas por semana economizadas com relatórios automatizados</p>
+        </div>
+        <div class="resultado-card tilt-card" data-reveal>
+          <div class="resultado-icon"><i class="fas fa-truck"></i></div>
+          <div class="resultado-valor">
+            <span class="resultado-number counter" data-target="5000">0</span><span class="resultado-suffix">+</span>
+          </div>
+          <p>Entregas monitoradas em tempo real pela plataforma desenvolvida</p>
+        </div>
+        <div class="resultado-card tilt-card" data-reveal>
+          <div class="resultado-icon"><i class="fas fa-boxes"></i></div>
+          <div class="resultado-valor">
+            <span class="resultado-number counter" data-target="98">0</span><span class="resultado-suffix">%</span>
+          </div>
+          <p>Precisão no controle de estoque após implementação do WMS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="projetos" id="projetos">
+    <div class="container">
+      <h2 class="section-title">Projetos</h2>
+      <p class="section-subtitle">Clique em um projeto para ver os detalhes completos</p>
+      <div class="projetos-grid">
+
+        <div class="projeto-card tilt-card" data-reveal data-project="wms3d">
+          <div class="projeto-header">
+            <span class="projeto-emoji">📦</span>
+            <span class="projeto-tag">WMS + IA</span>
+          </div>
+          <h3>Smart WMS 3D</h3>
+          <p>Visualização 3D de armazém com análise ABC e IA para otimização automática do posicionamento de produtos.</p>
+          <div class="projeto-tech">
+            <span>Python</span><span>Three.js</span><span>ML</span>
+          </div>
+          <span class="projeto-link">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+        </div>
+
+        <div class="projeto-card tilt-card featured" data-reveal data-project="plataforma">
+          <div class="projeto-header">
+            <span class="projeto-emoji">🚀</span>
+            <span class="projeto-tag">Tempo Real</span>
+          </div>
+          <h3>Plataforma Logística</h3>
+          <p>Portaria + roteirização + rastreamento em tempo real com integração de múltiplas transportadoras via API.</p>
+          <div class="projeto-tech">
+            <span>API REST</span><span>WebSocket</span><span>Mapas</span>
+          </div>
+          <span class="projeto-link">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+        </div>
+
+        <div class="projeto-card tilt-card" data-reveal data-project="reporte">
+          <div class="projeto-header">
+            <span class="projeto-emoji">📊</span>
+            <span class="projeto-tag">Analytics</span>
+          </div>
+          <h3>Sistema de Reporte</h3>
+          <p>Padronização de processos e análise de dados comerciais com geração automática de relatórios gerenciais.</p>
+          <div class="projeto-tech">
+            <span>Python</span><span>SQL</span><span>Power BI</span>
+          </div>
+          <span class="projeto-link">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+        </div>
+
+        <div class="projeto-card tilt-card" data-reveal data-project="integrada">
+          <div class="projeto-header">
+            <span class="projeto-emoji">🏢</span>
+            <span class="projeto-tag">Integração</span>
+          </div>
+          <h3>Sistema de Logística Integrada</h3>
+          <p>Gestão completa com integração via API, controle de CTe, estoque, custos e operações logísticas end-to-end.</p>
+          <div class="projeto-tech">
+            <span>API</span><span>CTe</span><span>Estoque</span>
+          </div>
+          <span class="projeto-link">Ver detalhes <i class="fas fa-arrow-right"></i></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section class="mapa-section" id="mapa">
+    <div class="container">
+      <h2 class="section-title">Operações ao Vivo</h2>
+      <p class="section-subtitle">Simulação de rotas logísticas monitoradas em tempo real</p>
+      <div class="mapa-wrapper">
+        <div id="map"></div>
+        <div class="mapa-legend">
+          <h4>Legenda</h4>
+          <div class="legend-item"><span class="legend-dot green"></span> Hub / Entregue</div>
+          <div class="legend-item"><span class="legend-dot yellow"></span> Em Trânsito</div>
+          <div class="legend-item"><span class="legend-dot red"></span> Pendente</div>
+          <div class="legend-item"><span class="legend-line"></span> Rota ativa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="dashboard" id="dashboard">
+    <div class="container">
+      <h2 class="section-title">Dashboard de Desempenho</h2>
+      <p class="section-subtitle">O tipo de visão analítica que desenvolvo para as operações</p>
+      <div class="charts-grid">
+        <div class="chart-card" data-reveal>
+          <h4><i class="fas fa-truck"></i> Entregas por Mês</h4>
+          <canvas id="chartEntregas"></canvas>
+        </div>
+        <div class="chart-card" data-reveal>
+          <h4><i class="fas fa-dollar-sign"></i> Índice de Custo Operacional</h4>
+          <canvas id="chartCusto"></canvas>
+        </div>
+        <div class="chart-card" data-reveal>
+          <h4><i class="fas fa-layer-group"></i> Análise ABC do Estoque</h4>
+          <canvas id="chartABC"></canvas>
+        </div>
+        <div class="chart-card" data-reveal>
+          <h4><i class="fas fa-medal"></i> SLA de Entregas (%)</h4>
+          <canvas id="chartSLA"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title">Stack Tecnológico</h2>
+      <p class="section-subtitle">Ferramentas que uso para transformar dados em decisões</p>
+      <div class="skills-grid">
+        <div class="skill-item" data-reveal><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="skill-item" data-reveal><i class="fas fa-database"></i><span>SQL</span></div>
+        <div class="skill-item" data-reveal><i class="fas fa-chart-bar"></i><span>Power BI</span></div>
+        <div class="skill-item" data-reveal><i class="fas fa-cogs"></i><span>SAP PP</span></div>
+        <div class="skill-item" data-reveal><i class="fas fa-plug"></i><span>API REST</span></div>
+        <div class="skill-item" data-reveal><i class="fab fa-js"></i><span>JavaScript</span></div>
+        <div class="skill-item" data-reveal><i class="fas fa-map-marked-alt"></i><span>GIS / Mapas</span></div>
+        <div class="skill-item" data-reveal><i class="fas fa-robot"></i><span>Machine Learning</span></div>
+        <div class="skill-item" data-reveal><i class="fab fa-git-alt"></i><span>Git</span></div>
+        <div class="skill-item" data-reveal><i class="fas fa-file-excel"></i><span>Excel Avançado</span></div>
+        <div class="skill-item" data-reveal><i class="fas fa-boxes"></i><span>WMS / ERP</span></div>
+        <div class="skill-item" data-reveal><i class="fas fa-route"></i><span>Roteirização</span></div>
+      </div>
+
+      <div class="proficiency-section">
+        <h3 class="proficiency-title">Nível de Proficiência</h3>
+        <div class="proficiency-grid">
+          <div class="prof-item" data-reveal>
+            <div class="prof-header"><span>Excel Avançado</span><span class="prof-pct">95%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="95"></div></div>
+          </div>
+          <div class="prof-item" data-reveal>
+            <div class="prof-header"><span>Power BI</span><span class="prof-pct">92%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="92"></div></div>
+          </div>
+          <div class="prof-item" data-reveal>
+            <div class="prof-header"><span>SAP PP</span><span class="prof-pct">90%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="90"></div></div>
+          </div>
+          <div class="prof-item" data-reveal>
+            <div class="prof-header"><span>SQL</span><span class="prof-pct">88%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="88"></div></div>
+          </div>
+          <div class="prof-item" data-reveal>
+            <div class="prof-header"><span>Python</span><span class="prof-pct">82%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="82"></div></div>
+          </div>
+          <div class="prof-item" data-reveal>
+            <div class="prof-header"><span>Automação de Processos</span><span class="prof-pct">85%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="85"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICAÇÕES -->
+  <section class="certificacoes" id="certificacoes">
+    <div class="container">
+      <h2 class="section-title">Certificações</h2>
+      <p class="section-subtitle">Qualificações que validam a expertise técnica e metodológica</p>
+      <div class="cert-grid">
+        <div class="cert-card tilt-card" data-reveal>
+          <div class="cert-icon green"><i class="fas fa-leaf"></i></div>
+          <div class="cert-info">
+            <span class="cert-badge">Green Belt</span>
+            <h3>Lean Six Sigma</h3>
+            <p>Metodologia de melhoria contínua e redução de desperdícios em processos industriais e logísticos.</p>
+          </div>
+        </div>
+        <div class="cert-card tilt-card" data-reveal>
+          <div class="cert-icon blue"><i class="fas fa-industry"></i></div>
+          <div class="cert-info">
+            <span class="cert-badge">Consultor</span>
+            <h3>SAP PP — Production Planning</h3>
+            <p>Planejamento e controle da produção com integração de módulos SAP para gestão industrial.</p>
+          </div>
+        </div>
+        <div class="cert-card tilt-card" data-reveal>
+          <div class="cert-icon yellow"><i class="fas fa-chart-bar"></i></div>
+          <div class="cert-info">
+            <span class="cert-badge">Microsoft</span>
+            <h3>Power BI — Data Analytics</h3>
+            <p>Criação de dashboards, relatórios interativos e modelagem de dados para tomada de decisão.</p>
+          </div>
+        </div>
+        <div class="cert-card tilt-card" data-reveal>
+          <div class="cert-icon purple"><i class="fab fa-python"></i></div>
+          <div class="cert-info">
+            <span class="cert-badge">Análise de Dados</span>
+            <h3>Python for Data Science</h3>
+            <p>Pandas, NumPy, automação de processos e machine learning aplicados à logística e supply chain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <h2 class="section-title">Vamos Conversar?</h2>
+      <p class="section-subtitle">Aberto a novas oportunidades e projetos desafiadores</p>
+      <div class="contato-grid">
+        <div class="contato-info">
+          <p class="contato-intro">Se você busca um profissional que une visão logística com tecnologia para gerar resultados reais, me chama.</p>
+          <div class="contato-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/weliton-barbosa-75b6b7352/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="contato-item">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/welitonbarbosa405-code" target="_blank">GitHub</a>
+          </div>
+          <div class="contato-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:weliton_epk@hotmail.com">weliton_epk@hotmail.com</a>
+          </div>
+        </div>
+        <form class="contato-form" id="contactForm">
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu e-mail" required>
+          <input type="text" name="empresa" placeholder="Empresa (opcional)">
+          <textarea name="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
+          <button type="submit" class="btn-primary mag-btn">
+            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Weliton Barbosa</p>
+      <p class="footer-sub">Feito com dedicação, dados e muita logística.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flutuante -->
+  <!-- Substitua SEU_NUMERO pelo seu número com DDI+DDD ex: 5541999999999 -->
+  <a href="https://wa.me/5541999945188" target="_blank" class="whatsapp-btn" title="Fale pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Modal de Projeto -->
+  <div id="projectModal" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-emoji" id="modalEmoji"></span>
+        <div>
+          <span class="projeto-tag" id="modalTag"></span>
+          <h2 id="modalTitle"></h2>
+        </div>
+      </div>
+
+      <!-- Carrossel de prints -->
+      <div class="carousel" id="carousel">
+        <button class="carousel-btn prev" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-track" id="carouselTrack">
+          <img class="carousel-img" id="carouselImg" src="" alt="Print do projeto">
+        </div>
+        <button class="carousel-btn next" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <span class="carousel-counter" id="carouselCounter"></span>
+      </div>
+
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-features">
+        <h4><i class="fas fa-check-circle"></i> Funcionalidades</h4>
+        <ul id="modalFeatures"></ul>
+      </div>
+      <div class="modal-bottom">
+        <div class="modal-tech" id="modalTech"></div>
+        <div class="modal-resultado" id="modalResultado"></div>
+      </div>
+      <a class="btn-primary modal-link" id="modalLink" target="_blank">
+        <i class="fab fa-github"></i> Ver no GitHub
+      </a>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
